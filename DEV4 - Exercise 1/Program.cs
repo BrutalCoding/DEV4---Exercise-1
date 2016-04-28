@@ -11,7 +11,8 @@ namespace DEV4___Exercise_1
         static void Main(string[] args)
         {
             NumberVisitor nv = new NumberVisitor();
-            nv.onMyInt(new MyInt());
+            INumber n = new MyInt();
+            n.visit(nv);
             Console.ReadLine();
         }
     }
